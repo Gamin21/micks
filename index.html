@@ -1,0 +1,98 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% if page == 'home' %}
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Enter the Vault</h2>
+                <p>From Marvel heroes to horror legends, global treasures to animal wonders—my collection spans worlds. Plus, gaming battles that never end.</p>
+                <div class="hero-grid">
+                    <div class="hero-card figures">
+                        <h3>Figure Collections</h3>
+                        <p>Marvel, DC, Jason, Michael, and more from around the globe.</p>
+                    </div>
+                    <div class="hero-card animals">
+                        <h3>Animal Passion</h3>
+                        <p>Creatures big and small steal my heart.</p>
+                    </div>
+                    <div class="hero-card gaming">
+                        <h3>Gaming Rivalry</h3>
+                        <p>You might be better than me at Mortal Kombat, but you're not as near me in FIFA/EA FC.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    {% elif page == 'figures' %}
+        <section class="figures-section">
+            <h2>My Epic Collection</h2>
+            <p>Every shelf tells a story—from caped crusaders to masked killers, sourced from every corner of the world.</p>
+            <div class="gallery-grid">
+                <div class="gallery-item marvel">
+                    <img src="https://images.unsplash.com/photo-1570456602300-d3efbb4d3e94?w=400&h=300&fit=crop&crop=entropy" alt="Marvel figures collection" loading="lazy">
+                    <div class="overlay">
+                        <h3>Marvel Universe</h3>
+                        <p>Iron Man, Spider-Man, and the Avengers in stunning detail.</p>
+                    </div>
+                </div>
+                <div class="gallery-item dc">
+                    <img src="https://images.unsplash.com/photo-1608043152269-423dbba4e7e4?w=400&h=300&fit=crop&crop=entropy" alt="DC figures collection" loading="lazy">
+                    <div class="overlay">
+                        <h3>DC Legends</h3>
+                        <p>Batman, Superman, and the Justice League elite.</p>
+                    </div>
+                </div>
+                <div class="gallery-item horror">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400&h=300&fit=crop&crop=entropy" alt="Horror figures like Jason and Michael" loading="lazy">
+                    <div class="overlay">
+                        <h3>Horror Icons</h3>
+                        <p>Jason Voorhees, Michael Myers, and classic slashers.</p>
+                    </div>
+                </div>
+                <div class="gallery-item global">
+                    <img src="https://images.unsplash.com/photo-1558618047-3c8c76ca7e92?w=400&h=300&fit=crop&crop=entropy" alt="Global collectible figures" loading="lazy">
+                    <div class="overlay">
+                        <h3>World Treasures</h3>
+                        <p>Rare finds from Japan, Europe, and beyond.</p>
+                    </div>
+                </div>
+                <div class="gallery-item animals">
+                    <img src="https://images.unsplash.com/photo-1425082661705-1834bfd09dca?w=400&h=300&fit=crop&crop=entropy" alt="Animal-themed figures" loading="lazy">
+                    <div class="overlay">
+                        <h3>Animal Kingdom</h3>
+                        <p>Wildlife figures that capture nature's spirit.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    {% elif page == 'gaming' %}
+        <section class="gaming-section">
+            <h2>The Ultimate Rivalry</h2>
+            <p class="quote">"You might be better than me at Mortal Kombat, but you're not as near me in FIFA/EA FC."</p>
+            <p>The battle lines are drawn. Fighting games? Your turf. Soccer sims? Mine. Let's see who reigns supreme.</p>
+            <div class="rivalry-grid">
+                <div class="rivalry-card mk">
+                    <h3>Mortal Kombat</h3>
+                    <p>Your domain of fatalities and combos. I respect the skill—barely.</p>
+                    <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=300&fit=crop&crop=entropy" alt="Mortal Kombat fighters" loading="lazy">
+                </div>
+                <div class="rivalry-card fifa">
+                    <h3>FIFA/EA FC</h3>
+                    <p>My pitch of precision passes and goals. Step up if you dare.</p>
+                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=300&fit=crop&crop=entropy" alt="Soccer game action" loading="lazy">
+                </div>
+            </div>
+            <div class="challenge">
+                <button onclick="alert('Challenge accepted! Time to boot up EA FC.')">Issue Challenge</button>
+            </div>
+        </section>
+
+    {% elif page == 'about' %}
+        <section class="about-section">
+            <h2>About Mickey</h2>
+            <p>I'm a collector at heart, hunting figures from Marvel epics to horror nightmares, with a soft spot for animals that ground me in the real world. Gaming? It's where rivalries are forged—MK for you, FIFA for me. Connect if you're into the hunt!</p>
+            <p>Email: mickey@example.com | Twitter: @mickeycollects</p>
+        </section>
+    {% endif %}
+{% endblock %}
